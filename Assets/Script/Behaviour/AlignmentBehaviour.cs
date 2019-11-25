@@ -22,6 +22,7 @@ public class AlignmentBehaviour : Behaviour
         if (boid.Neighbours.Count > 0)
         {
             alignmentMove /= boid.Neighbours.Count;
+            alignmentMove -= boid.GetComponent<Rigidbody2D>().velocity;
         }
 
         return alignmentMove;

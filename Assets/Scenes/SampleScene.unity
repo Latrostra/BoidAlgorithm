@@ -270,5 +270,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 746957382651482021, guid: 89fc5ac26648cbb46954f77949821a80,
+        type: 3}
+      propertyPath: agentBehaviour.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 746957382651482021, guid: 89fc5ac26648cbb46954f77949821a80,
+        type: 3}
+      propertyPath: agentBehaviour.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5926d042b398b7346be7c80b02c69787,
+        type: 2}
+    - target: {fileID: 746957382651482021, guid: 89fc5ac26648cbb46954f77949821a80,
+        type: 3}
+      propertyPath: agentBehaviour.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e9579476e74fa946be3ffa285f1e5ab,
+        type: 2}
+    - target: {fileID: 746957382651482021, guid: 89fc5ac26648cbb46954f77949821a80,
+        type: 3}
+      propertyPath: agentBehaviour.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43d1899939fac3a4abbd7067dd176d00,
+        type: 2}
+    - target: {fileID: 746957382651482021, guid: 89fc5ac26648cbb46954f77949821a80,
+        type: 3}
+      propertyPath: boidsToSpawn
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89fc5ac26648cbb46954f77949821a80, type: 3}

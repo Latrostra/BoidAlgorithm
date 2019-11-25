@@ -22,7 +22,6 @@ public class CohesionBehaviour : Behaviour
         if (boid.Neighbours.Count > 0)
         {
             cohesionMove /= boid.Neighbours.Count;
-            cohesionMove -= (Vector2)boid.transform.position;
         }
 
         return cohesionMove;

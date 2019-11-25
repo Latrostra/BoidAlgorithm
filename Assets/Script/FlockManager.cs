@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FlockManager : MonoBehaviour
 {
+    [SerializeField] private int boidsToSpawn = 10;
+    [SerializeField] private int speedBoids = 2;
     [SerializeField] private GameObject boidPrefab;
     [SerializeField] private List<Behaviour> agentBehaviour;
     private List<BoidAgent> _boids;
@@ -23,13 +25,13 @@ public class FlockManager : MonoBehaviour
             {
                 move += behaviour.CalculateVelocity(boid); 
             }
-            boid.SetVelocity(move.normalized);
+            boid.SetVelocity(Vector2.ClampMagnitude(move, speedBoids));
         }
     }
     
     private void InstantiateBoids()
     {   
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < boidsToSpawn; i++)
         {
             var _boid = Instantiate(
                 boidPrefab, 

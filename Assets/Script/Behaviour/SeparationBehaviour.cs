@@ -10,7 +10,6 @@ public class SeparationBehaviour : Behaviour
     public override Vector2 CalculateVelocity(BoidAgent boid)
     {
         Vector2 separationMove = Vector2.zero;
-        int nVoid = 0;
 
         if (boid.Neighbours.Count == 0)
         {
@@ -19,15 +18,9 @@ public class SeparationBehaviour : Behaviour
 
         foreach (BoidAgent neighbourBoid in boid.Neighbours)
         {
-            if (Vector2.Distance(boid.transform.position, neighbourBoid.transform.position) < _separationRange)
+            if (Mathf.Abs(Vector2.Distance(boid.transform.position, neighbourBoid.transform.position)) < _separationRange)
             {
                 separationMove += (Vector2)(boid.transform.position - neighbourBoid.transform.position);
-                nVoid++;
-            }
-
-            if (nVoid > 0)
-            {
-                separationMove /= nVoid;
             }
         }
         return separationMove;
