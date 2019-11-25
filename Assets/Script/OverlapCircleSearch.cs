@@ -18,4 +18,12 @@ public class OverlapCircleSearch : MonoBehaviour, ISearchArea
         }
         return _neighbours;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(transform.position, _radius);
+    }
 }
+
+

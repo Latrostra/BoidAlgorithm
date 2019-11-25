@@ -24,6 +24,7 @@ public class BoidAgent : MonoBehaviour
     {
         Neighbours = searchArea.GetNeighbours();
         rb2D.velocity = _velocity;
+        Rotate();
     }
     public void SetVelocity(Vector3 velocity)
     {
@@ -32,5 +33,11 @@ public class BoidAgent : MonoBehaviour
     public void Initialize(string _name)
     {
         name = _name;
+    }
+
+    private void Rotate()
+    {
+        float angle = Mathf.Atan2(rb2D.velocity.y, rb2D.velocity.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
     }
 }

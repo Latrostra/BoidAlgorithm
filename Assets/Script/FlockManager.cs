@@ -12,7 +12,13 @@ public class FlockManager : MonoBehaviour
         _boids = new List<GameObject>();
         InstantiateBoids();
     }
-    public void InstantiateBoids()
+
+    public void Update()
+    {
+
+    }
+    
+    private void InstantiateBoids()
     {   
         for(int i = 0; i < 100; i++)
         {
@@ -24,7 +30,7 @@ public class FlockManager : MonoBehaviour
 
             var _boidAgent = _boid.GetComponent<BoidAgent>();
             _boidAgent.Initialize("Boid: " + (i + 1));
-            _boidAgent.SetVelocity(transform.right);
+            _boidAgent.SetVelocity(new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)).normalized);
             _boids.Add(_boid);
         }
     }
