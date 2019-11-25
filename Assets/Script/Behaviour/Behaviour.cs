@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Behaviour : ScriptableObject
 {
-    public abstract Vector2 CalculateVelocity();
+    public abstract Vector2 CalculateVelocity(BoidAgent boid);
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OverlapCircleSearch : MonoBehaviour, ISearchArea
 {
-    [SerializeField] private float _radius = 1f;
+    [SerializeField] private float _radius = 3f;
     public List<BoidAgent> GetNeighbours()
     {
         var _colNeighbours = Physics2D.OverlapCircleAll(this.transform.position, _radius);
